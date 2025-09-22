@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Floriselscript-Thin';
+	src: url('../fonts/floriselscript-thin.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/floriselscript-thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/floriselscript-thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/floriselscript-thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/floriselscript-thin.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/floriselscript-thin.svg#floriselscript-thin') format('svg'); /* Chrome < 4, Legacy iOS */
+}
