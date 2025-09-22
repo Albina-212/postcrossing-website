@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+	font-family: 'Floriselscript-Thin';
+	src: url('fonts/floriselscript-thin.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/floriselscript-thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/floriselscript-thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/floriselscript-thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/floriselscript-thin.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/floriselscript-thin.svg#floriselscript-thin') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+a, label, p {
+    text-decoration: none;
+    color: #443B3A;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+body{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-family: 'Playfair', serif;
+    /*font-size: 140px;*/
+    font-size: 5vw;
+    font-weight: bold;
+    color: #443B3A;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: lighter;
+    color: #443B3A;
+}
+
+.container, .container2, .container3, .container4, .container5{
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+
+    position: relative; 
+    z-index: 1;
+}
+
+.container2{
+    margin-top: 0;
+}
+
+.container nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Распределяет элементы между краями */
+    align-items: center;
+}
+
+.container nav ul{
+    display: flex;
+    font-family: 'Comfortaa', sans-serif;
+    /*font-size: 16.06px;*/
+    font-size: 1.15vw;
+    font-weight: lighter;
+}
+
+.container nav li{
+    margin-left: 1rem;
+    margin-right: 2rem; /* Добавляет отступ между элементами */
+}
+
+
+.img-logo{
+    max-width: 65.82px;
+    height: auto;  
+}
+
+.hero-info{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18vw;
+}
+
+
+.hero-info h1{
+    display: flex;
+    font-family: 'Floriselscript-Thin';
+    /*font-size: 140px;*/
+    font-size: 10vw;
+    font-weight: lighter;
+    color: #443B3A;
+}
+
+.btn_blue {
+    background-color: #9CDAF9; 
+    border: none; 
+    /*padding: 20px 50px; /* Отступы внутри кнопки */
+    padding: 1.5vw 4.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer; /* Курсор меняется на руку при наведении */
+    /*border-radius: 20px; /* Скругляем углы */
+    border-radius: 1.5vw;
+    font-size: 1.5vw;
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+}
+
+.btn_red {
+    background-color: white;
+    border: 1px solid #DB5A5A; 
+    /*padding: 19px 109px; /* Отступы внутри кнопки */
+    padding: 1.4vw 8.4vw;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer;
+    /*border-radius: 20px; /* Скругляем углы */
+    border-radius: 1.5vw;
+    font-size: 1.5vw; /* Размер текста */
+    color: #DB5A5A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-info a{
+    font-size: 1.5vw;
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.background_profile, .background_sent, .background_registration, .background_library, .background_questions{
+    z-index: -1; /*Размещаем изображения за другими элементами*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background-image: url("images/profile/background.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+.background_sent{
+    background-image: url("images/sent/fon.png");
+}
+
+.background_registration{
+    background-image: url("images/registration/background.png");
+}
+
+.background_library{
+    background-image: url("images/library/background.png");
+}
+
+.background_questions{
+    background-image: url("images/library/background_questions.png");
+}
+
+.background_2elem{
+    z-index: -1; /*Размещаем изображения за другими элементами*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%; /* Растягиваем картинку без сохранения пропорций */
+}
+
+.fon1{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%; /* Растягиваем картинку без сохранения пропорций */
+}
+
+.fon1 img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fon2{
+    margin-top: 65vw;
+}
+
+.fon3{
+    margin-top: 130vw;
+}
+
+.main-images{
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-images img {
+    max-width: 40%;
+    height: auto;   /*Автоматическая высота, сохраняет пропорции*/
+    object-fit: contain;
+    z-index: -1; /* Размещаем изображения за другими элементами*/
+}
+
+.main-image-1{
+    margin-top: 10rem;
+}
+
+.questions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Распределяет элементы между краями */
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 55vw;
+}
+
+.quest1{
+    position: relative;
+    width: 30%;
+}
+
+.questions img{
+    position: absolute;
+    z-index: -1;
+    padding-bottom: 3vw;
+}
+
+.quest_text{
+    position: absolute;
+    margin-top: 7vw;
+    margin-bottom: 7vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    height: 100%;
+    text-align: center; /* Центрирование текста */
+}
+
+.quest_text h2{
+    font-family: 'Playfair', serif;
+    /*font-size: 140px;*/
+    font-size: 2vw;
+    font-weight: bold;
+    color: #443B3A;
+    padding-bottom: 1vw;
+}
+
+.quest_text a{
+    font-family: 'Comfortaa', sans-serif;
+    /*font-size: 140px;*/
+    font-size: 1.3vw;
+    color: #443B3A;
+    padding-bottom: 1vw;
+    line-height: 1.6em;
+}
+
+.statistics{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Распределяет элементы между краями */
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.line_red, .line_blue{
+    width: 55vw; /* Ширина линии */
+    height: 1.5vw; /* Толщина линии */
+    background-color: #DB5A5A; /* Цвет линии */
+    border-radius: 4vw; /* Радиус закругления */
+    margin-top: 0.35vw;
+}
+
+.line_blue{
+    background-color: #9CDAF9; /* Цвет линии */
+}
+
+.heading2{
+    width: 100%;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.heading2 h1{
+    font-size: 3vw;
+    font-weight: normal;
+}
+
+
+.heading2 .line_red, .heading2 .line_blue{
+    width: 100%; /* Ширина линии */
+    height: 0.5vw; /* Толщина линии */
+    background-color: #DB5A5A; /* Цвет линии */
+    border-radius: 4vw; /* Радиус закругления */
+    margin-top: 0.35vw;
+}
+
+.heading2 .line_blue{
+    background-color: #9CDAF9; /* Цвет линии */
+}
+
+.facts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    justify-content: space-between; /* Распределяет элементы между краями*/ 
+    align-items: center;
+}
+
+.plash{
+    max-width: 45%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.plash img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.plash a {
+    position: absolute;
+    top: 37%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: #443B3A;
+
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.5vw;
+    color: #443B3A;
+}
+
+/*Для margin и padding используем vw*/
+  
+footer{
+    margin-top: 70vw;
+    margin-bottom: 5vw;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container{
+    flex-direction: column;
+
+}
+
+.footer_columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer_logo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.footer_logo img{
+    margin-right: 2vw;
+
+    max-width: 60px;
+    height: auto;
+}
+
+.footer_logo h1{
+    font-size: 3vw;
+    font-weight: normal;
+}
+
+.footer_menu{
+    text-align: left;
+}
+
+.footer_menu li{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.footer_menu a{
+    font-size: 1.2vw;
+}
+
+.footer_contacts h2{
+    margin-bottom: 1.5vw;
+    font-size: 1.5vw;
+}
+
+.footer_contacts a{
+    font-size: 1.2vw;
+}
+
+.footer_contacts li{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.footer_links .btn_red{
+    background-color: white;
+    border: 1px solid #443B3A; 
+    padding: 1.4vw 2vw;
+    text-align: center; 
+    text-decoration: none;
+    display: flex; 
+    cursor: pointer;
+    border-radius: 1.5vw;
+    font-size: 1.2vw; /* Размер текста */
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer_links .btn_red a{
+    margin-right: 1vw;
+}
+
+.footer_links button:nth-child(2) a{
+    margin-right: 3vw;
+}
+
+
+.footer_menu, .footer_contacts, .footer_links {
+    width: 30%;
+}
+
+/*-----------------РЕГИСТРАЦИЯ-----------------*/
+.window_of_registration{
+    margin-top: 2vw;
+    align-items: center;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.window_of_registration img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;      
+    
+    z-index: -1;
+}
+
+
+.info_text{
+    position: absolute;
+}
+
+.info_text h1{
+    font-size: 3.5vw;
+    font-weight: normal;
+    color: #443B3A;
+    text-align: center;
+    margin-top: 1.7vw;
+}
+
+#registration_form{
+    margin-top: 2.5vw;
+    text-align: center;
+}
+
+.form_row {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    margin-bottom: 2.5vw;
+}
+  
+.form_row label {
+    margin-right: 1vw; /* Отступ между меткой и полем */
+    flex-shrink: 0; /* Запрещаем метке уменьшаться */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.6vw;
+    box-sizing: border-box;
+    background-color: #C5ECFF; 
+    border: none; 
+
+    text-align: center;
+    border-radius: 1vw;
+    font-size: 1vw;
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+}
+
+#registration_form button{
+    padding: 1vw 2vw;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+/*-----------------ЛИЧНЫЙ КАБИНЕТ-----------------*/
+.container2{
+    display: flex;
+    gap: 3vw; /* Между столбцами */
+    align-items: start;
+}
+
+.profile-photo, .photo-otkritki {
+    position: relative;
+    margin-bottom: 1.5vw;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-photo h2{
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+
+.left_part{
+    width: 25%;
+    flex-direction: column; /*элементы друг под другом*/
+    text-align: center;
+}
+
+.profile-photo img {
+    max-width: 21vw;
+    max-height: 21vw;
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+}
+  
+.left_part .btn_red, .right_part .btn_red {
+    margin-bottom: 1.5vw;
+    background-color: #FBFFB4;
+    border: 1px solid #9CDAF9; 
+    padding: 1vw 2vw;
+    cursor: pointer;
+    border-radius: 1vw;
+    font-size: 1vw; /* Размер текста */
+    color: #443B3A;
+    width: 100%;
+}
+  
+.info-blocks, .info-blocks2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Распределяет элементы между краями */
+}
+
+.block {
+    background-color: #ffffffce;   
+    border: 0.1vw solid #9CDAF9;
+    border-radius: 1vw;
+    padding: 1.2vw 1vw;
+    width: calc(50% - 0.3vw);
+    box-sizing: border-box;
+    font-size: 1vw;
+
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 0.6vw;
+}
+
+.block img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 1vw;
+}
+
+.thin-block {
+    background-color: #ffffffce;   
+    border: 0.1vw solid #9CDAF9;
+    border-radius: 0.85vw;
+    padding: 1vw 0vw;
+    width: 100%;
+    margin-bottom: 2vw;
+}
+  
+
+.right_part{
+    width: 75%;
+    flex-direction: column; /*элементы друг под другом*/
+}
+  
+.main-info {
+    max-width: 100%;
+    margin-bottom: 2vw;
+}
+
+.main-info h2, .info-blocks2 h2 {
+    margin-bottom: 0.8vw;
+    font-weight: bold;
+}
+  
+.scrollable-text {
+    max-height: 18vw;
+    background-color: #ffffffce;   
+    border: 0.1vw solid #9CDAF9;
+    border-radius: 0.85vw;
+    padding: 1.5vw 1.5vw;
+    max-width: 100%;
+    margin-bottom: 2vw;
+    overflow-y: auto;    
+}
+
+
+.block_head .block{
+    align-items: left;
+    text-align: left;
+    font-size: 1.1vw;
+    padding: 1vw 1.5vw;
+    width: 100%;
+}
+
+.block_head .block p{
+    padding: 0.5vw 0vw;
+}
+
+.info-blocks2 .block_head:first-child{
+    width: calc(40% - 1vw);
+}
+
+.info-blocks2 .block_head:last-child{
+    width: 60%;
+}
+
+.info-blocks2 .block_head:last-child .block{
+    overflow-y: auto;
+    max-height: 13.5vw;
+}
+
+/*-----------------ХОЧУ ОТПРАВИТЬ-----------------*/
+.window_of_registration{
+    margin-top: 2vw;
+    align-items: center;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.window_of_registration img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;      
+    
+    z-index: -1;
+}
+
+
+.info_text{
+    position: absolute;
+}
+
+.info_text p{
+    padding: 1vw;
+}
+
+
+.info_text .btn_red{
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    margin-top: 4vw;
+    border-radius: 1.1vw;
+}
+
+.container3{
+    margin-top: -1rem;
+    font-size: 1.5vw;
+}
+
+#cont_1{
+    align-items: center;
+}
+
+.container4{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_yellow {
+    background-color: #FBFFB4;
+    border: 1px solid #443B3A; 
+    padding: 1.4vw 8.4vw;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer;
+    border-radius: 1.5vw;
+    font-size: 1.3vw; /* Размер текста */
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/*-----------------ПОЛУЧИЛ ОТКРЫТКУ-----------------*/
+.photo-otkritki img{
+    max-width: 50vw;
+    max-height: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.right_buttons{
+    text-align: right;
+}
+
+.btn_white {
+    background-color: #ffffff;
+    border: 1px solid #443B3A; 
+    padding: 1.4vw 4vw;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer;
+    border-radius: 1.5vw;
+    font-size: 1.3vw; /* Размер текста */
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+}
+
+/*-----------------ВОПРОСЫ-----------------*/
+.faq-item {
+    width: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden; /* Скрываем переполнение блока ответа */
+
+    background-color: rgba(255, 255, 255, 0.515);
+    border: 1px solid #DB5A5A; 
+    text-align: left; 
+    text-decoration: none;
+    display: inline-block; 
+    border-radius: 1.5vw;
+    font-size: 1.5vw; /* Размер текста */
+    color: #443B3A;
+    vertical-align: middle; /* Вертикальное центрирование */
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 2vw;
+}
+  
+.question_down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.515);
+    cursor: pointer;
+}
+  
+.question_down h3{
+    margin: 0;
+    font-size: 1.6vw; /* Размер текста */
+    font-weight: normal;
+    
+}
+  
+.arrow {
+    font-size: 2vw;
+    transition: transform 0.3s ease; /* Плавная анимация */
+    color: #DB5A5A;
+}
+  
+.answer {
+    padding: 1.5vw;
+    background-color: #fbffb457;
+    border-top: 1px solid #ccc;
+}
+  
+.question_down.active .arrow {
+    transform: rotate(90deg); /* Поворот треугольника */
+}
+
+.container5{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.answer p{
+    letter-spacing: 0vw;
+    word-spacing: 0.3vw; /* Увеличивает интервал между словами */
+    line-height: 2.5vw;
+}
+
+.postcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.postcard {
+    height: 200px; /* Фиксированная высота */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center; /* вертикальное выравнивание */
+    
+}
+
+.postcard img {
+    height: 100%;
+    width: auto; /* Автоматическая ширина */
+    object-fit: contain; /* Сохранение пропорций */
+}

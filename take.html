@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcrossing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <img class="img-logo" src="images/logo.png" alt="">
+            <ul>
+                <li><a href="library.html">Библиотека открыток</a></li>
+                <li><a href="questions.html">Правила</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background_library"></div>
+
+    <div class="container">
+        <div class="heading2">
+            <h1>Получил открытку</h1>
+            <div class="line_red"></div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="left_part">
+            <div class="photo-otkritki">
+                <img src="images/sent/marka_rotate.png" alt="">
+            </div>
+            
+            <button class="btn_red">Загрузить фото</button>
+        </div>
+
+        <div class="right_part">
+            <div class="main-info">
+                <h2>Введите:</h2>
+                <form id="registration_form" action="submit_registration.php" method="post">  <!-- action указывает на скрипт обработки -->
+                    <div class="form_row">
+                        <label for="id_otkr">Идентификатор:</label>
+                        <input type="text" id="id_otkr" name="id_otkr" required>
+                    </div>
+                </form>
+
+                <div class="right_buttons">
+                    <button class="btn_yellow">Добавить открытку</button>
+                    <button class="btn_white">Открыть профиль отправителя</button>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>

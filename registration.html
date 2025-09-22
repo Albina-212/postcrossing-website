@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcrossing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <img class="img-logo" src="images/logo.png" alt="">
+            <ul>
+                <li><a href="library.html">Библиотека открыток</a></li>
+                <li><a href="questions.html">Правила</a></li>
+                <li><a href="profile.html">Профиль</a></li>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background_registration"></div>
+
+    <div class="container">
+        <div class="window_of_registration">
+            <img src="images/registration/ramka.png" alt="">
+            <div class="info_text">
+                <h1>Регистрация</h1>
+                <form id="registration_form" action="submit_registration.php" method="post">  <!-- action указывает на скрипт обработки -->
+                    <div class="form_row">
+                        <label for="nickname">Никнейм:</label>
+                        <input type="text" id="nickname" name="nickname" required>
+                    </div>
+              
+                    <div class="form_row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form_row">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form_row">
+                        <label for="password_confirm">Повторите пароль:</label>
+                        <input type="password" id="password_confirm" name="password_confirm" required>
+                    </div>              
+                    <button class="btn_blue" type="submit">Зарегестрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
